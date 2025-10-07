@@ -4,8 +4,95 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Belajar Pemrograman Web</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
-    <h1>Pertemuan pertama - Pengenalan Lingkungan Lab dan GIT</h1>
+    <header class="main-header">
+      <h1>My Portofolio</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="#content">Home</a>
+          </li>
+          <li>
+            <a href="#skill">Skill</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section id="content">
+        <h2 class="section-title">Tentang saya</h2>
+        <div class="section-about">
+          <div class="section-about-text">
+            <h3 id="animasiPembukaan"></h3>
+            <h4>Saya Muhammad Shohih Arrifa'i</h4>
+            <p class="section-about-description">
+              Seorang mahasiswa semester 3 informatika di Universitas Nahdlatul
+              Ulama dan beberapa pengalaman di bidang IT. Mempunyai keahlian
+              dalam desain grafis, Developer Operational, dan pemrograman dasar.
+              Bersemangat untuk terus belajar dan berkembang di dunia teknologi.
+            </p>
+            <button onclick="showMessage()" class="btn">Klik Saya</button>
+          </div>
+
+          <div class="section-about-image">
+            <img
+              src="./assets/image/hero.png"
+              alt="ikon-penyambutan"
+              class="hero-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-skill" id="skill">
+        <h2 class="section-title">Skill</h2>
+        <div class="skills">
+          <div class="skill-item">
+            <i class="fab fa-docker"></i>
+            <h3>Docker</h3>
+            <p>Mahir dalam penerapan praktik Docker.</p>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-python"></i>
+            <h3>Python</h3>
+            <p>Mahir dalam pemrograman Python.</p>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-js"></i>
+            <h3>JavaScript</h3>
+            <p>Mahir dalam pemrograman JavaScript.</p>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-react"></i>
+            <h3>React Native</h3>
+            <p>Mahir dalam pengembangan aplikasi mobile dengan React Native.</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-network-wired"></i>
+            <h3>Jaringan</h3>
+            <p>Mahir dalam pengembangan jaringan komputer.</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-film"></i>
+            <h3>Editing</h3>
+            <p>Mahir dalam pengembangan video animasi dan multimedia.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-garis"></div>
+      <p>&copy; 2025 Muhammad Shohih Arrifa'i</p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

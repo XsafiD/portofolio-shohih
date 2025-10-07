@@ -1,0 +1,225 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #111827;
+  margin: 0;
+}
+
+/* Navbar */
+.main-header {
+  position: fixed;
+  top: 20px; /* Sedikit jarak dari atas */
+  left: 50%; /* Posisikan 50% dari kiri */
+  /* Geser ke kiri 50% dari lebarnya sendiri untuk membuatnya pas di tengah */
+  transform: translateX(-50%);
+  width: 90%; /* Lebar header */
+  max-width: 1200px; /* Lebar maksimum */
+  display: flex;
+  justify-content: space-between; /* Beri jarak antara judul dan navigasi */
+  align-items: center; /* Sejajarkan item secara vertikal */
+  /* Warna background dengan sedikit transparansi */
+  background-color: rgba(31, 41, 55, 0.9);
+  color: white;
+  padding: 10px 50px; /* Rampingkan padding */
+  z-index: 1000; /* Pastikan di atas elemen lain */
+  border-radius: 50px; /* Sudut melengkung */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Efek bayangan untuk 'mengambang' */
+  backdrop-filter: blur(3px);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 30px;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  font-size: large;
+  text-decoration: none;
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+  padding-top: 150px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111827;
+  color: white;
+  position: relative;
+  bottom: 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  color: #e5e7eb;
+}
+
+/* About Section */
+.section-about {
+  display: flex;
+  gap: 20px;
+  padding: 50px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.section-about-text {
+  flex: 2;
+  color: #e5e7eb;
+  margin-right: 100px;
+}
+
+.section-about-description {
+  text-align: justify;
+}
+
+.section-about-image {
+  margin: auto 50px;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.39);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.39);
+}
+
+/* Skill Section */
+.skills {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  padding: 2rem 50px;
+  overflow: hidden;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.skill-item {
+  color: #e5e7eb;
+  position: relative;
+  background-color: #111827;
+  padding: 2rem 1rem;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-item::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #111827;
+  background-image: conic-gradient(transparent, #8a2be2, #4169e1, transparent 30%);
+  animation: rotate 4s linear infinite;
+  filter: blur(5px);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.skill-item::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background-color: #1f2937;
+  border-radius: 8px;
+}
+
+.skill-item:hover::before {
+  opacity: 1;
+}
+
+.skill-item > * {
+  position: relative;
+  z-index: 1;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.fa-docker {
+  color: #2496ed;
+}
+
+.fa-python {
+  color: #3572a5;
+}
+
+.fa-js {
+  color: #f7df1e;
+}
+
+.fa-react {
+  color: #61dafb;
+}
+
+.fa-network-wired {
+  color: #4caf50;
+}
+
+.fa-film {
+  color: #e91e63;
+}
+
+/* Button Style */
+.btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #1350b3;
+}
+
+.footer-garis {
+  width: 100%;
+  height: 3px;
+  background-color: #3b82f6;
+  margin-bottom: 10px;
+}
